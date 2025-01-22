@@ -145,10 +145,8 @@ export default function ControlUI() {
         addDebugMessage('Created stream from screenshot');
       } else {
         stream = await navigator.mediaDevices.getDisplayMedia({ 
-          video: { 
-            cursor: 'always',
-            displaySurface: 'monitor'
-          } 
+          video: true,
+          audio: false
         });
         addDebugMessage('Got display media stream');
       }
